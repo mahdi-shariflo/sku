@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .auth-label {
+    @apply block text-[#9c9da2] font-yekan text-xs pb-2;
+  }
+
+  .auth-input {
+    @apply w-full  placeholder:text-right placeholder:text-xs py-2 text-[16px] font-yekan rounded-md outline-none px-2 border-2 border-transparent focus:border-[#0449e9];
+  }
+
+  .auth-error-message {
+    @apply mt-2 block !text-[10px] !text-[#E13238] font-yekan;
+  }
+
+  .contaner-signin {
+    @apply bg-center bg-cover bg-no-repeat h-full w-full min-h-screen flex bg-none md:bg-[url('../public/image/bg-signin.webp')];
+  }
+}
+
+@screen sm {
+  .form {
+    clip-path: none;
+  }
+
+  @screen md {
+    .form {
+      clip-path: polygon(21% 0, 100% 0, 100% 100%, 0% 100%);
+    }
+  }
+}
+
+@layer utilities {
+  .tag-wrap {
+    filter: drop-shadow(-30px 0px 10px #282a376a);
+  }
+}

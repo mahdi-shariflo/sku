@@ -1,0 +1,64 @@
+@tailwind components;
+
+
+@layer components {
+.container-menu-chat{
+  @apply hidden md:flex flex-col min-w-[50px] max-w-[50px] bg-[#F5F7FB] text-gray-600 pt-14 justify-start items-center gap-10 h-[100vh]
+}
+}
+
+
+.scroll-style::-webkit-scrollbar {
+  width: 5px;
+}
+
+.scroll-style::-webkit-scrollbar-thumb {
+  background-color: #bdc3c7;
+  border-radius: 10px !important;
+}
+.scroll-style::-webkit-scrollbar-track {
+  background-color: #eee;
+}
+
+.react-input-emoji--input {
+  direction: rtl !important;
+  text-align: right !important;
+  font-family: "yekanBold" !important;
+  font-size: 12px !important;
+}
+.react-input-emoji--container {
+  background-color: transparent !important;
+  border-radius: 0 !important;
+  border-color: transparent !important;
+}
+
+.react-emoji-picker--container {
+  position: absolute !important;
+  left: -65% !important;
+  bottom: 100% !important;
+}
+
+.emoji-mart-light {
+  width: 313px !important;
+}
+
+.emoji-mart-category-label {
+  display: none !important;
+}
+
+.emoji-mart-scroll::-webkit-scrollbar {
+  display: none !important;
+}
+.emoji-mart-search-10{
+    font-family: "yekanBold" !important;
+}
+
+#emoji-mart-search-2::placeholder{
+    color:  transparent !important;
+
+}
+.react-input-emoji--placeholder{
+    font-family: "yekanBold" !important;
+    font-size: 12px !important;
+   
+}

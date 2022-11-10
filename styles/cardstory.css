@@ -1,0 +1,23 @@
+@tailwind components;
+
+
+@layer components {
+    .li-card-story{
+        @apply flex flex-col justify-center items-center
+    }
+    
+    .border-gradient-story{
+        @apply relative bg-gradient-to-tr from-yellow-400 to-fuchsia-600 p-[0.2rem] rounded-full
+    }
+    .border-white-story{
+        @apply block relative rounded-full  p-[0.1rem] transform bg-white hover:-rotate-6
+    }
+    
+    .img-story{
+        @apply h-16 w-16 md:h-14 md:w-14 relative rounded-full overflow-hidden
+    }
+    
+    .btn-create-story{
+        @apply absolute bottom-0 right-0 bg-[#0096f5] h-6 w-6 rounded-full text-2xl text-white font-semibold border-2 border-white flex justify-center items-center
+    }
+}

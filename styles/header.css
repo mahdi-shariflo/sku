@@ -1,0 +1,28 @@
+.header {
+  @apply flex justify-between items-center  px-1 md:px-5 sticky top-0 h-[70px] shadow-sm bg-white z-50;
+}
+.header-right {
+  @apply flex flex-1;
+}
+
+.header-left {
+  @apply flex justify-end items-center flex-1 gap-3;
+}
+
+.container-search {
+  @apply bg-[#F4F6FA]  items-center rounded-lg flex-1 mr-12 px-1  shadow-sm;
+}
+
+.input-search {
+  @apply bg-transparent w-full outline-none text-[#9DA9B9] text-[11px] px-1;
+}
+.btn-create-post {
+  @apply shadow-sm !bg-[#1778F2] text-xs hover:shadow-sm;
+}
+
+.container-logo{
+    @apply items-center gap-3 cursor-pointer
+}
+.logo{
+    @apply w-10 h-10 rounded-lg flex justify-center items-center text-gray-800 bg-[#EEF4FA]
+}

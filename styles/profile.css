@@ -1,0 +1,53 @@
+.background-profile {
+  height: 40vh;
+  width: 100%;
+  position: relative;
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+}
+
+@media all and (max-width: 768px) {
+  .background-profile {
+    height: 30vh;
+  }
+}
+
+.btn-back-profile {
+  @apply w-10 h-10 flex justify-center items-center text-gray-500 bg-white rounded-full absolute top-3 left-3 z-50
+}
+
+
+.container-img-profile{
+  @apply flex flex-col justify-center items-center  mx-1 cursor-pointer absolute  left-0 right-0 md:right-12 -bottom-8
+}
+
+.img-profile{
+  @apply relative !h-[6rem] !w-[6rem] border-2 border-white rounded-full overflow-hidden
+}
+
+.btn-follow-profile{
+  @apply bg-[#0096f5] text-xs w-28 py-3 text-white rounded-lg
+}
+.btn-profile-message{
+  @apply border text-xs w-28 py-3 text-[#2c3e50] rounded-lg
+}
+
+.bio-profile{
+  @apply text-center text-xs mt-2 px-10 text-[#A4AABD]
+}
+
+.fullname-profile {
+  @apply text-center   text-[#2c3e50]
+}
+.count-follow{
+  @apply text-xl text-[#2c3e50]
+}
+
+.text-count{
+  @apply text-xs text-[#A4AABD]
+}

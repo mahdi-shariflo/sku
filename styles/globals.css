@@ -1,26 +1,75 @@
+@font-face {
+  font-family: "sansBold";
+  src: url("../public//fonts/sans/IRANSans_Bold.ttf");
+}
+@font-face {
+  font-family: "sans";
+  src: url("../public//fonts/sans/IRANSans.ttf");
+}
+@font-face {
+  font-family: "sansMedium";
+  src: url("../public//fonts/sans/IRANSans_Medium.ttf");
+}
+@font-face {
+  font-family: "sansBlack";
+  src: url("../public//fonts/sans/IRANSans_Black.ttf");
+}
+@font-face {
+  font-family: "sansLight";
+  src: url("../public//fonts/sans/IRANSans_Light.ttf");
+}
+@font-face {
+  font-family: "sansUltraLight";
+  src: url("../public//fonts/sans/IRANSans_UltraLight.ttf");
+}
+@font-face {
+  font-family: "yekan";
+  src: url("../public//fonts/IRANYekanBold.ttf");
+}
+
+
+*{
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+
+*{
+  -webkit-tap-highlight-color:transparent
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
   box-sizing: border-box;
+  font-family: "sansBold" !important;
+  background: #F7F8FB !important;
+  background-color: #F7F8FB !important;
+  height: 100vh !important;
+}
+body{
+  direction: rtl;
+
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
-}
+
+/* header */
+@import url("./header.css");
+
+/* home */
+@import url("./home.css");
+
+@import url("./common.css");
+
+@import url("./requests.css");
+
+@import url("./profile.css");
+
+@import url("./story.css");
+
+
+@import url("./chat.css");
+@import url("./navigation.css");
+@import url("./cardstory.css");
+@import url("./editprofile.css");
+@import url("./auth.css");

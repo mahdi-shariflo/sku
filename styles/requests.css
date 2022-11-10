@@ -1,0 +1,15 @@
+.container-title-request {
+  @apply flex justify-between items-center;
+}
+.title-request {
+  @apply text-[#BCC2C9] !text-xs;
+}
+.count-request {
+  @apply bg-[#1973E6] text-white w-6 h-6 text-xs rounded-full flex items-center justify-center;
+}
+.btn-accpect-request {
+  @apply !bg-[#1777F2] text-xs py-2 shadow-sm hover:shadow-sm;
+}
+.reject-request {
+  @apply text-[#636F81] text-xs py-2 shadow-none hover:shadow-sm hover:bg-transparent;
+}

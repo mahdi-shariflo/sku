@@ -1,0 +1,40 @@
+.container-card {
+  @apply bg-white border border-gray-100 w-full p-3 rounded-lg text-gray-700 h-fit;
+}
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
+.hide-scroll::-webkit-scrollbar-thumb {
+  background-color: #bdc3c7;
+}
+.hide-scroll::-webkit-scrollbar-track {
+  background-color: #eee;
+}
+
+.modalcover {
+  background-color: #060606de;
+}
+
+.ltr{
+    direction: ltr !important;
+}
+
+.rtl{
+  direction: rtl !important;;
+}
+
+.sansMedium{
+  font-family: "sansMedium";
+}
+
+.yekanMedium{
+  font-family: "yekanMedium" !important;
+}
+.yekanBold{
+  font-family: "yekanBold" !important;
+}
+
+
+li{
+  list-style: none !important;
+}
