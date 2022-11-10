@@ -13,7 +13,7 @@
 }
 
 .container-navigation {
-  @apply fixed w-full bg-white  bottom-0 !z-[9999] shadowNavigation border-t border-gray-300  rounded-t-xl py-2  justify-center items-center;
+  @apply fixed w-full bg-white  bottom-0 !z-[9999] !shadow-xl border-t border-gray-300  rounded-t-xl py-2  justify-center items-center;
 }
 
 .container-items-li{

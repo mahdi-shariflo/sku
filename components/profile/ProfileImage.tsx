@@ -3,8 +3,9 @@ import { useRouter } from "next/router";
 import React from "react";
 import { MdOutlineArrowBackIos } from "react-icons/md";
 import Logo from "../../public/image/test.jpg";
+import { userType } from "../../typing";
 
-const ProfileImage = () => {
+const ProfileImage = ({user}:userType) => {
   const router = useRouter();
   const navigateBack = () => {
     router.back();
@@ -19,10 +20,13 @@ const ProfileImage = () => {
         <MdOutlineArrowBackIos size={20} />
       </div>
       {/* background image */}
-      <img src={Logo.src} className="background-profile" />
+      <div className="relative w-full h-[300px] rounded-lg overflow-hidden">
+      <Image layout="fill" src={user.bgImage} />
+      </div>
+      {/* <img src={user.bgImage} className="background-profile" /> */}
       {/*  image profile */}
       <div className="container-img-profile">
-        <img src={Logo.src} className="img-profile" />
+        <img src={user.image} className="img-profile" />
       </div>
     </div>
   );

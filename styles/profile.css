@@ -31,10 +31,10 @@
 }
 
 .btn-follow-profile{
-  @apply bg-[#0096f5] text-xs w-28 py-3 text-white rounded-lg
+  @apply bg-[#0096f5] text-xs w-24 !py-1 text-white rounded-lg
 }
 .btn-profile-message{
-  @apply border text-xs w-28 py-3 text-[#2c3e50] rounded-lg
+  @apply border text-xs w-24 !py-2 text-[#2c3e50] rounded-lg
 }
 
 .bio-profile{

@@ -1,6 +1,5 @@
 import type {
   GetServerSideProps,
-  NextPage,
 } from "next";
 import HomeCenter from "../components/home/homeCenter";
 import HomeLeft from "../components/home/homeLeft";
@@ -8,8 +7,6 @@ import HomeRight from "../components/home/homeRight";
 import LayoutPublic from "../components/layoutPublic";
 import Navigation from "../components/layoutPublic/Navigation";
 import { getSession } from "next-auth/react";
-import {useEffect} from "react"
-import { getToken } from "next-auth/jwt";
 import { userSession } from "../typing";
 interface props{
   user:userSession

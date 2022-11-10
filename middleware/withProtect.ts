@@ -11,7 +11,7 @@ export const withAuth =
   async (req: NextApiRequest, res: NextApiResponse) => {
     try {
       const token = await getToken({ req, secret });
-
+      console.log(token)
       if (token?.sub) {
         const user = await Users.findOne({
           _id: token.sub,
