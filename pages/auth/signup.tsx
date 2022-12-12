@@ -1,5 +1,4 @@
-import { useRouter } from "next/router";
-import { useEffect } from "react";
+
 import Header from "../../components/auth/Header";
 import FormSignup from "../../components/auth/FormSignup";
 
@@ -7,8 +6,7 @@ import FormSignup from "../../components/auth/FormSignup";
 
 
 
-const signup = () => {
-  const router = useRouter();
+const Signup = () => {
 
  
 
@@ -27,4 +25,4 @@ const signup = () => {
   );
 };
 
-export default signup;
+export default Signup;
