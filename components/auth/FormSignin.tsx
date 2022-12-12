@@ -34,16 +34,17 @@ const FormSignin = () => {
       redirect: false,
     };
     setIsLoading(true);
-    setError("")
+    setError("");
     const res: any = await signIn("credentials", option);
+    console.log(res);
     if (!res.error && res.status === 200) {
       router.push("/");
     }
-    if (res.status === 401) {
-        setIsLoading(false);
-      return setError("نام کاربری یا رمز عبور اشتباه است");
-    }
-    router.push("/auth/error")
+    // if (res.status === 401) {
+    //     setIsLoading(false);
+    //   return setError("نام کاربری یا رمز عبور اشتباه است");
+    // }
+    // router.push("/auth/error")
   };
 
   return (

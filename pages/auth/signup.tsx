@@ -21,7 +21,7 @@ const signup = () => {
   return (
     <div className={`contaner-signin background-image`}>
       <div className="tag-wrap z-50 w-full md:flex-[2]">
-        <div className="form h-full w-full  bg-[#282A37] p-4">
+        <div className="form h-full w-full  bg-[#f5f5f5] p-4">
           <Header />
           <FormSignup  />
         </div>

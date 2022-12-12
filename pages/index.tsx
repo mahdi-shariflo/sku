@@ -8,6 +8,7 @@ import LayoutPublic from "../components/layoutPublic";
 import Navigation from "../components/layoutPublic/Navigation";
 import { getSession } from "next-auth/react";
 import { userSession } from "../typing";
+import { allUser } from "../utils/API";
 interface props{
   user:userSession
 }
@@ -32,6 +33,8 @@ export const getServerSideProps: GetServerSideProps =
   async (ctx) => {
     // check user is login or not
     const session = await getSession(ctx);
+    // const users = await allUser()
+    // console.log(users)
     if (!session?.user) {
       return {
         redirect: {

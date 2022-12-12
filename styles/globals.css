@@ -28,9 +28,7 @@
 }
 
 
-*{
-  -webkit-tap-highlight-color: transparent !important;
-}
+
 
 
 *{
@@ -51,23 +49,9 @@ body{
 }
 
 
-/* header */
-@import url("./header.css");
 
-/* home */
-@import url("./home.css");
+
 
 @import url("./common.css");
 
-@import url("./requests.css");
-
-@import url("./profile.css");
-
-@import url("./story.css");
-
-
-@import url("./chat.css");
-@import url("./navigation.css");
-@import url("./cardstory.css");
-@import url("./editprofile.css");
 @import url("./auth.css");

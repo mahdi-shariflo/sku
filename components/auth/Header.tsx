@@ -9,11 +9,17 @@ const Header = () => {
   return (
     <header className="flex items-center gap-12 md:gap-32">
       <div className="flex items-center gap-2 md:gap-5">
-        <div className="w-4 h-4 md:w-8 md:h-8 bg-[#5195ea] rounded-full shadow-md"></div>
+        <div
+          className={`lg:pt-2 flex flex-row-reverse gap-1 cursor-pointer  font-sansBlack text-sm md:text-lg lg:text-2xl border-b border-[#0096f5] text-[#0096f5]`}
+        >
+          <span className="-rotate-12">S</span>
+          <span className="-rotate-12">K</span>
+          <span>U</span>
+        </div>
         <Logo />
       </div>
       <div>
-        <ul className="flex !gap-8 items-center text-[#9c9da2] font-sansMedium text-sm md:text-xs">
+        <ul className="flex !gap-8 items-center text-black font-sansMedium text-sm md:text-xs">
           <li>
             <Link
               href={

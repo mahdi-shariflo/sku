@@ -11,34 +11,14 @@ import Router, { useRouter } from "next/router";
 import Input from "../../components/Input";
 import { Formik } from "formik";
 import * as Yup from "yup";
-import { getUsers } from "../../utils/API";
-import OrLine from "../../components/auth/OrLine";
 import Header from "../../components/auth/Header";
-import BtnGoogle from "../../components/auth/BtnGoogle";
 import FormSignin from "../../components/auth/FormSignin";
 
-
-
-
-const SignIn = ({ providers }: { providers: any }) => {
+const SignIn = () => {
   const {
     push,
     query: { error },
   } = useRouter();
-  const session = useSession();
-
-  useEffect(() => {
-    // @ts-ignore
-    if (session.data?.user) {
-      Router.push("/");
-    }
-    if (error) {
-      push({
-        pathname: "/auth/error",
-        query: { error },
-      });
-    }
-  }, [session, error]);
 
   interface valuesType {
     email: string;
@@ -54,26 +34,19 @@ const SignIn = ({ providers }: { providers: any }) => {
       password: password,
       redirect: false,
     };
-    const res = await signIn("credentials", option);
   };
   return (
-   
     <div className={`contaner-signin background-image`}>
       <div className="tag-wrap z-50 w-full md:flex-[2]">
-        <div className="form h-full w-full  bg-[#282A37] p-4">
+        <div className="form h-full w-full  bg-[#f5f5f5] p-4">
           {/* header menu */}
           <Header />
-          <div className="flex justify-center w-full md:w-[50%] lg:w-[40%] mt-14 mx-auto flex-col">
-            {/* @ts-ignore */}
-            {Object.values(providers).map(
-              (provider: any) => {
-                if (provider.name === "Credentials") return;
-                return <BtnGoogle key={provider.name} provider={provider} />;
-              }
-            )}
-            {/* or */}
-            <OrLine />
-            <FormSignin  />
+          <div className="flex gap-20 justify-center h-[70vh] w-full md:w-[50%] lg:w-[40%] mt-14 mx-auto flex-col">
+            <h1 className="font-sansBlack text-black text-[17px]">
+              برای ورود، لطفا ایمیل و رمز عبور خود را وارد
+              کنید
+            </h1>
+            <FormSignin />
           </div>
         </div>
       </div>
@@ -85,11 +58,3 @@ const SignIn = ({ providers }: { providers: any }) => {
 };
 
 export default SignIn;
-
-export const getServerSideProps: GetServerSideProps =
-  async (context) => {
-    const providers = await getProviders();
-    return {
-      props: { providers },
-    };
-  };

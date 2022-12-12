@@ -1,6 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-
+import LogoSku from "../public/image/logo_sku.jpg"
 const Logo = ({
   className = "text-white",
 }: {
@@ -8,17 +9,7 @@ const Logo = ({
 }) => {
   return (
     <Link href="/">
-      <div
-        className={`lg:pt-2 flex flex-row-reverse gap-1 cursor-pointer  font-sansBlack text-sm md:text-lg lg:text-2xl border-b ${className}`}
-      >
-        <span className="-rotate-12">H</span>
-        <span>a</span>
-        <span className="-rotate-12">m</span>
-        <span>s</span>
-        <span className="rotate-12">h</span>
-        <span>a</span>
-        <span>b</span>
-      </div>
+     <Image width={200} height={50} src={LogoSku} alt=""/>
     </Link>
   );
 };
