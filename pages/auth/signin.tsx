@@ -1,11 +1,6 @@
 import { useEffect, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Button } from "@mui/material";
-import {
-  getProviders,
-  signIn,
-  useSession,
-} from "next-auth/react";
 import { GetServerSideProps } from "next";
 import Router, { useRouter } from "next/router";
 import Input from "../../components/Input";

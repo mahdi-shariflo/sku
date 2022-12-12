@@ -1,4 +1,3 @@
-import {useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import Header from "../../components/auth/Header";
@@ -10,13 +9,8 @@ import FormSignup from "../../components/auth/FormSignup";
 
 const signup = () => {
   const router = useRouter();
-  const session = useSession();
 
-  useEffect(() => {
-    if (session.data?.user) {
-      router.push("/");
-    }
-  }, [session]);
+ 
 
   return (
     <div className={`contaner-signin background-image`}>

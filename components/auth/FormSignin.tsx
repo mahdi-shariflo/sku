@@ -3,8 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { btnAuth } from "../../utils/styles";
 import * as Yup from "yup";
 import { Button } from "@mui/material";
-import { propsForm, signupData } from "../../typing";
-import { signIn, useSession } from "next-auth/react";
+import {  signupData } from "../../typing";
 import { useRouter } from "next/router";
 import BeatLoader from "react-spinners/BeatLoader";
 import { MuiRtl } from "../../utils/Mui";
@@ -19,7 +18,7 @@ const validationSchema = Yup.object({
     .required("لطفا ایمیلتونو وارد کنین "),
 });
 const FormSignin = () => {
-  const { data: session } = useSession();
+
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
@@ -33,13 +32,6 @@ const FormSignin = () => {
       password,
       redirect: false,
     };
-    setIsLoading(true);
-    setError("");
-    const res: any = await signIn("credentials", option);
-    console.log(res);
-    if (!res.error && res.status === 200) {
-      router.push("/");
-    }
     // if (res.status === 401) {
     //     setIsLoading(false);
     //   return setError("نام کاربری یا رمز عبور اشتباه است");

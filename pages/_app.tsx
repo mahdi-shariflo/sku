@@ -4,9 +4,6 @@ import { RecoilRoot } from "recoil";
 import RecoilNexus from "recoil-nexus";
 import "./../node_modules/slick-carousel/slick/slick.css";
 import "./../node_modules/slick-carousel/slick/slick-theme.css";
-import { Session } from "next-auth";
-import { SessionProvider } from "next-auth/react";
-import type { AppProps } from "next/app";
 import ProgressBar from "@badrap/bar-of-progress";
 import Router from "next/router";
 import {
@@ -32,20 +29,13 @@ Router.events.on("routeChangeError", () =>
 
 const queryClient = new QueryClient();
 
-function MyApp({
-  Component,
-  pageProps,
-}: AppProps<{
-  session: Session;
-}>) {
+function MyApp({ Component, pageProps }:any) {
   return (
     <QueryClientProvider client={queryClient}>
-      <SessionProvider session={pageProps.session}>
-        <RecoilRoot>
-          <RecoilNexus />
-          <Component {...pageProps} />
-        </RecoilRoot>
-      </SessionProvider>
+      <RecoilRoot>
+        <RecoilNexus />
+        <Component {...pageProps} />
+      </RecoilRoot>
     </QueryClientProvider>
   );
 }
