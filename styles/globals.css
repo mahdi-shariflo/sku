@@ -42,6 +42,7 @@ body {
   box-sizing: border-box;
   font-family: "sansBold" !important;
   height: 100vh !important;
+  background-color: #f6fafe;
 }
 body{
   direction: rtl;
@@ -55,3 +56,17 @@ body{
 @import url("./common.css");
 
 @import url("./auth.css");
+
+.MuiButtonBase-root{
+  padding: 0 !important;
+}
+
+.container_posts::-webkit-scrollbar{
+  width: 4px;
+}
+.container_posts::-webkit-scrollbar-thumb{
+  background-color: rgb(161, 161, 161);
+}
+.container_posts::-webkit-scrollbar-track{
+  background-color: rgba(186, 181, 181, 0.433);
+}

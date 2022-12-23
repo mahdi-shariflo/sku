@@ -18,7 +18,7 @@ module.exports = {
       colors: {
         silver: "#ff5e57",
         imperialPrimer:"#2f3542",
-        black: "#1A365D",
+        black: "#37466C",
       },
       backgroundColor: {
         silver: "#ff5e57",
