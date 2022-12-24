@@ -29,6 +29,11 @@ export default function Modal({
         onClose={handleClose}
         className={className}
         maxWidth={maxWidth}
+        PaperProps={{
+          sx:{
+            height:"500px"
+          }
+        }}
       >
         {/* <div
           onClick={handleClose}
