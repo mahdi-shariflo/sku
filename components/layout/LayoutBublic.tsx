@@ -26,9 +26,9 @@ const LayoutBublic = ({ children }: Props) => {
             </p>
             <div className="flex flex-col">
               {MenuItems.map((menu: any) => (
-                <Link href={`/${menu.route}`}>
+                <Link    key={menu.id} href={`/${menu.route}`}>
                   <div
-                    key={menu.id}
+                 
                     className={`py-4 ${
                       router.pathname === menu.route
                         ? "bg-gray-100/60"
