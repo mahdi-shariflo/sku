@@ -17,16 +17,10 @@ export const MenuItems = [
     route: "/profile",
   },
   {
-    id: 3,
-    name: "پست های ذخیره شده",
-    icon: BsBookmarkDashFill,
-    route: "/profile",
-  },
-  {
     id: 4,
     name: "خروج",
     icon: RiLogoutBoxRFill,
-    route: "/profile",
+    route: "/logOut",
   },
 ];
 export const TabMenu = [

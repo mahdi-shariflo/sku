@@ -26,13 +26,13 @@ const Header = ({ setOpen }: Props) => {
       <div className="flex gap-2 flex-1">
         <div
           onClick={() => setShowMenu(true)}
-          className="flex-1 flex relative items-center bg-white h-11 rounded-xl border-2 border-[#D8E4F2] px-2"
+          className="flex-1 flex relative items-center bg-white  h-11 rounded-xl border-2 border-[#D8E4F2] px-2"
         >
           <BsSearch className="text-black" />
           <input className="bg-transparent w-full outline-none px-2" />
           <div
-            className={`w-full z-50  bg-white absolute shadow-sm h-[300px] top-12 left-0 overflow-auto rounded-xl font-reqularRobot text-black px-3 pt-2 text-[14px] transition-all duration-150 ${
-              showMenu ? "opacity-100" : "opacity-0"
+            className={`w-full  bg-white absolute  shadow-sm h-[300px] top-12 left-0 overflow-auto rounded-xl font-reqularRobot text-black px-3 pt-2 text-[14px] transition-all duration-150 ${
+              showMenu ? "opacity-100 !z-[99999]" : "opacity-0 -z-10"
             }`}
           >
             <div>tststststststststst</div>

@@ -1,6 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/router";
-import React, {useState } from "react";
+import React, { useState } from "react";
 import Logo from "../../public/image/logo_sku.jpg";
 import { MenuItems } from "../../utils/data";
 import { Filter } from "../Filter";
@@ -25,34 +26,36 @@ const LayoutBublic = ({ children }: Props) => {
             </p>
             <div className="flex flex-col">
               {MenuItems.map((menu: any) => (
-                <div
-                  key={menu.id}
-                  className={`py-4 ${
-                    router.pathname === menu.route
-                      ? "bg-gray-100/60"
-                      : ""
-                  }`}
-                >
-                  <div className="flex items-center gap-7 pr-7 cursor-pointer">
-                    <menu.icon
-                      size={22}
-                      className={`${
-                        router.pathname === menu.route
-                          ? "text-[#096FA6]"
-                          : "text-[#A4B6E1]"
-                      }`}
-                    />
-                    <p
-                      className={`text-sm font-sansLight ${
-                        router.pathname === menu.route
-                          ? "text-[#096FA6]"
-                          : "text-[#A4B6E1]"
-                      }`}
-                    >
-                      {menu.name}
-                    </p>
+                <Link href={`/${menu.route}`}>
+                  <div
+                    key={menu.id}
+                    className={`py-4 ${
+                      router.pathname === menu.route
+                        ? "bg-gray-100/60"
+                        : ""
+                    }`}
+                  >
+                    <div className="flex items-center gap-7 pr-7 cursor-pointer">
+                      <menu.icon
+                        size={22}
+                        className={`${
+                          router.pathname === menu.route
+                            ? "text-[#096FA6]"
+                            : "text-[#A4B6E1]"
+                        }`}
+                      />
+                      <p
+                        className={`text-sm font-sansLight ${
+                          router.pathname === menu.route
+                            ? "text-[#096FA6]"
+                            : "text-[#A4B6E1]"
+                        }`}
+                      >
+                        {menu.name}
+                      </p>
+                    </div>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>

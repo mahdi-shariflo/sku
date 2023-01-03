@@ -70,3 +70,13 @@ body{
 .container_posts::-webkit-scrollbar-track{
   background-color: rgba(186, 181, 181, 0.433);
 }
+
+.rmdp-input{
+  height: 36px !important;
+  text-align: center !important;
+  min-width: 300px !important;
+}
+
+.rmdp-top-class {
+  justify-content: center !important;
+}

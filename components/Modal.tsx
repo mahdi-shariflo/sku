@@ -1,7 +1,5 @@
 import * as React from "react";
 import Dialog from "@mui/material/Dialog";
-import { MdOutlineClose } from "react-icons/md";
-import IconButton from "@mui/material/IconButton";
 
 interface props {
   children: React.ReactNode;
@@ -31,7 +29,8 @@ export default function Modal({
         maxWidth={maxWidth}
         PaperProps={{
           sx:{
-            height:"500px"
+            height:"540px",
+           
           }
         }}
       >

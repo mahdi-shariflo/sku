@@ -38,6 +38,7 @@ const CardPost = () => {
   ) => {
     setAnchorEl(event.currentTarget);
   };
+  // @ts-ignore
   const handleClose = () => {
     setAnchorEl(null);
   };
